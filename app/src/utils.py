@@ -7,3 +7,17 @@
 # for reference on exceptions, check the class notes here: https://github.com/FTEC-6v99/python-overview/blob/master/advanced/exceptions.py
 #
 # Make sure that you add type hints to the function paramter and return value
+
+import typing as t
+import math
+
+def calc_avg(numbers: list[t.Union[int, float]]) -> float:
+   
+    sum: float = 0
+    
+    for number in numbers:
+        
+        sum += number
+        
+
+    return round(sum/len(numbers),2)
